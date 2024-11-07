@@ -1,0 +1,10 @@
+ProductId,Category,Name,Price,Rating,Feature,Image
+1,Plant,Aloe Vera Plant,10.00,5,1,img/Client1_AloePlant.png
+2,Tree,Apple Tree,150.00,4,10,img/Client1_AppleTree.png
+3,Tree,Birch Tree,49.99,3,9,img/Client1_BirchTree.png
+4,Garden Supplies,Bird House,15.50,2,8,img/Client1_BirdHouse.png
+5,Tree,Maple Tree,60.00,4.5,7,img/Client1_MapleTree.png
+6,Garden Supplies,Potting Soil,30.00,4,6,img/Client1_PottingSoil.png
+7,Plant,Spider Plant,14.75,5,2,img/Client1_SpiderPlant.png
+8,Plant,String of Pearls,17.99,3.5,3,img/Client1_StringofPearls.png
+9,Garden Supplies,Watering Can,10.99,1,4,img/Client1_WateringCan.png

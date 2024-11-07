@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Bloom Valley Nursery">
+  <meta name="viewport" content="width=device-width">
+  <title>Bloom Valley Nursery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!--BootStrap-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!--Google Fonts-->
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="background">
+  <!--Navigation-->
+  <header class="green">
+    <nav class="navbar navbar-expand-lg px-2">
+
+      <a class="navbar-brand" href="index.html">
+        <img class="logo"
+          src="https://sophialearning.s3.amazonaws.com/markup_pictures/38739/file/1b2923938fcee4fe10efe60f07ee2439.png"
+          alt="Bloom Valley Nursery Logo" class="d-inline-block align-top">
+        Bloom Valley Nursery
+      </a>
+      <!--Coupon Modal Trigger-->
+      <button class="btn green" data-bs-toggle="modal" data-bs-target="#coupon">
+        <a class="nav-link" href="#"><i class="fa-solid fa-tag"></i> Coupon</a>
+      </button>
+
+      <button class="btn btn-outline-dark ms-lg-2" id="cartBtn"> <a class="nav-link" href="#">
+        <i class="bi bi-cart"></i><i class="fa-solid fa-shopping-cart fa-2x1"></i> Cart</a>
+      </button>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html"><i class="fa-solid fa-calendar-days"></i> Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><i class="fa-solid fa-address-card"></i> About Us</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/catalog.html"><i class="fa-solid fa-seedling"></i> Plants</a></li>
+              <li><a class="dropdown-item" href="/catalog.html"><i class="fa-solid fa-tree"></i> Trees</a></li>
+              <li><a class="dropdown-item" href="/catalog.html"><i class="fa-solid fa-trowel"></i> Gardening
+                  Supplies</a></li>
+              <li><a class="dropdown-item" href="/catalog.html"><i class="fa-solid fa-sun"></i> All Products</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <!--Coupon Modal-->
+
+  <div class="modal fade" id="coupon" tabindex="-1" role="dialog" aria-labelledby="couponLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="couponLabel">Coupon</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Get 10% off with coupon code GET10</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Subscribe Modal-->
+  <div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="subscribeLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="subscribeLabel">Subscribed</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Thank you for subscribing! Watch for our latest deals, upcoming events, and fun garden facts.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script>
+      document.getElementById('addEmail').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const emailInput = document.getElementById('email');
+        const subscribeMessage = document.getElementById('subscribeMessage');
+        const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+        if (!emailPattern.test(emailInput.value)) {
+          subscribeMessage.textContent = 'The email entered is invalid. Please try again.';
+        } else {
+          subscribeMessage.textContent = 'Thank you for subscribing! Watch for our latest deals, upcoming events, and fun garden facts.';
+        }
+      });
+    </script>
+    
+ 
+
+  <!--CTA-->
+  <main class="p-3">
+    <div class="container">
+      <div class="d-flex align-items-center">
+        <img class="logo-lg d-inline-block align-top"
+          src="https://sophialearning.s3.amazonaws.com/markup_pictures/38739/file/1b2923938fcee4fe10efe60f07ee2439.png"
+          alt="Bloom Valley Nursery Logo">
+        <h1 class="title-lg text-uppercase ms-3">Bloom Valley Nursery</h1>
+      </div>
+      <h2 class="title-md">Your Local Family-Owned Garden Center</h2>
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="/catalog.html">
+              <img src="/img/Client1_AloePlant.png" href="/catalog.html" class="d-block w-100" alt="Shop Plants">
+              <span class="CTA-span">
+                <h3>Shop Plants</h3>
+                <h4>We carry an array of native<br>species, herbs, vegtables, and more!</h4>
+              </span>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="/catalog.html">
+              <img src="img/Client1_AppleTree.png" class="d-block w-100" alt="Shop Trees">
+              <span class="CTA-span>
+                <h3>Shop Trees</h3>
+                <h4>Feed your family with home grown fruits</h4>
+              </span>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="/catalog.html">
+              <img src="img/Client1_WateringCan.png" class="d-block w-100" alt="Shop Garden Supplies">
+              <span class="CTA-span">
+                <h3>Shop Garden Supplies</h3>
+                <h4>Get the rights tools for the job</h4>
+              </span>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="/catalog.html">
+              <img src="img/Client1_PottingSoil.png" class="d-block w-100" alt="Shop All Categories">
+              <span class="CTA-span">
+                <h3>Shop</h3>
+                <h4>Whether it is plants, trees, or<br>supplies, we've got you covered!</h4>
+              </span>
+            </a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!--Blog-->
+  <article class= "p-5">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="img/Client1_BirdHouse.png" class="card-img-top" alt="Blog 1">
+            <div class="card-body">
+              <h5 class="card-title">Blog Title 1</h5>
+              <p class="card-text text-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-none d-md-block">
+          <div class="card">
+            <img src="img/Client1_SpiderPlant.png" class="card-img-top" alt="Blog 2">
+            <div class="card-body">
+              <h5 class="card-title">Blog Title 2</h5>
+              <p class="card-text text-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-none d-md-block">
+          <div class="card">
+            <img src="img/Client1_MapleTree.png" class="card-img-top" alt="Blog 3">
+            <div class="card-body">
+              <h5 class="card-title">Blog 3</h5>
+              <p class="card-text text-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+
+  <!--Reviews-->
+  <section class="p-5">
+
+    <div class="text-center p-3">
+    </div>
+
+
+    <div class="container">
+      <h2 class="section-header">Client Review </h2>
+      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+      <div class="testimonials">
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="single-item">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="profile">
+                      <div class="img-area">
+                        <i class="material-icons" style="font-size:70px;">face_4</i>
+                      </div>
+                      <div class="bio">
+                        <h3>Mary Doe</h3>
+                        <h4>Customer since 1998</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="content">
+                      <p class="caption"><span><i class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet,
+                        consectetur
+                        adipisicing elit. Vel a eius excepturi molestias commodi aliquam error magnam consectetur
+                        laboriosam numquam, minima eveniet nostrum sequi saepe ipsam non ea, inventore tenetur! Corporis
+                        commodi consequatur molestiae voluptatum!</p>
+                      <p class="socials">
+                        <i class="fa fa-x-twitter"></i>
+                        <i class="fa fa-behance"></i>
+                        <i class="fa fa-pinterest"></i>
+                        <i class="fa fa-dribbble"></i>
+                        <i class="fa fa-vimeo"></i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="single-item">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="profile">
+                      <div class="img-area">
+                        <i class="material-icons" style="font-size:70px;">face_2</i>
+                      </div>
+                      <div class="bio">
+                        <h2>Jane Jacob</h2>
+                        <h4>Customer since 2005</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="content">
+                      <p class="caption"><span><i class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet,
+                        consectetur
+                        adipisicing elit. Vel a eius excepturi molestias commodi aliquam error magnam consectetur
+                        laboriosam numquam, minima eveniet nostrum sequi saepe ipsam non ea, inventore tenetur! Corporis
+                        commodi consequatur molestiae voluptatum!</p>
+                      <p class="socials">
+                        <i class="fa fa-x-twitter"></i>
+                        <i class="fa fa-behance"></i>
+                        <i class="fa fa-pinterest"></i>
+                        <i class="fa fa-dribbble"></i>
+                        <i class="fa fa-vimeo"></i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="single-item">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="profile">
+                      <div class="img-area">
+                        <i class="material-icons" style="font-size:70px;">face_3</i>
+                      </div>
+                      <div class="bio">
+                        <h2>Jingleheimer Schmidt</h2>
+                        <h4>Customer since 2022</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="content">
+                      <p class="caption"><span><i class="fa fa-quote-left"></i></span>Lorem ipsum dolor sit amet,
+                        consectetur
+                        adipisicing elit. Vel a eius excepturi molestias commodi aliquam error magnam consectetur
+                        laboriosam numquam, minima eveniet nostrum sequi saepe ipsam non ea, inventore tenetur! Corporis
+                        commodi consequatur molestiae voluptatum!</p>
+                      <p class="socials">
+                        <i class="fa fa-x-twitter"></i>
+                        <i class="fa fa-behance"></i>
+                        <i class="fa fa-pinterest"></i>
+                        <i class="fa fa-dribbble"></i>
+                        <i class="fa fa-vimeo"></i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  </div>
+
+  <!--Footer-->
+  <footer class="green">
+    <div class="text-center p-1 dark-green">
+
+    </div>
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Bloom Valley Nursery</h5>
+          <p>
+            <a href="index.html">
+              <img class="logo"
+                src="https://sophialearning.s3.amazonaws.com/markup_pictures/38739/file/1b2923938fcee4fe10efe60f07ee2439.png"
+                alt="Bloom Valley Nursery Logo">
+            </a>
+            Your local family-owned garden center.
+          </p>
+
+
+
+
+        </div>
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 pb-1">Subscribe for latest promos</h5>
+          <form id="addEmail">
+            <div class="form-group mb-4">
+              <input type="email" class="form-control white" id="email" name="email" aria-describedby="emailHelp"
+                placeholder="Enter email" required
+                data-error="Please enter a valid email address">
+            </div>
+            <div class="help-block with-errors"></div>
+            <!--Subscribe Modal Trigger-->
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#subscribe" id="subscribeBtn" type="button" disabled>Subscribe</button>
+          </form>
+
+
+          
+          
+        </div>
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Hours</h5>
+
+          <table class="table text-center">
+            <tbody class="fw-normal">
+              <tr>
+                <td>Mon - Fri:</td>
+                <td>9am - 6pm</td>
+              </tr>
+              <tr>
+                <td>Sat - Sun:</td>
+                <td>10am - 5pm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3 dark-green">
+      © 2024
+      <a class="text-white" href="#"> Privacy - Terms</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/6e12b8e9a3.js" crossorigin="anonymous"></script>
+  <script src="/script/script.js"></script>
+</body>
+
+</html>

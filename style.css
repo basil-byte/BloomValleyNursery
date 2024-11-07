@@ -1,0 +1,349 @@
+html {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  
+}
+
+/*
+Palette
+#014038 Canopy Green
+#96BAA0 Meadow Mist
+#BDD4DA Sky Bloom
+#F0C06D Sunlit Petal
+
+Font Colors
+#00231C Detritus Green
+#C5C3C3 Willow Gray
+
+Typography
+Title Large: Arial Bold 30px;
+Title: Arial Bold 25px;
+Subtitle: Comfortaa Normal 15px;
+Body Large: Calibri Normal 20px;
+Body Strong: Calibri Bold 16px;
+Body: Calibri Normal 16px;
+Captions: Arial Bold 11px;
+
+.title-lg {font: Arial Bold 30px;}
+.title-md {font: Arial Bold 25px;}
+.sub {font: Comfortaa Normal 15px;}
+.body-lg {font: Calibri Normal 20px;}
+.body-str {font: Calibri Bold 16px;}
+.body-md {font: Calibri Normal 16px;}
+.caption {font: Arial Bold 11px;}
+
+
+*/
+.background {
+  background: #F7F7F7);
+  background: linear-gradient(124deg, #BDD4DA 0%, #F7F7F7 42%, #F7F7F7 56%, #F0C06D 100%);
+}
+
+body {
+ 
+  color: #00231C;
+  font-family: Calibri, Arial, sans-serif;
+  
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.logo-lg {
+  height: 100px;
+  width: 100px;
+}
+
+h1 {font: Arial Bold 30px;}
+h2 {font: Arial Bold 25px;}
+h3 {font: Comfortaa Normal 15px;}
+h4 {font: Calibri Normal 20px;}
+h5 {font: Calibri Bold 16px;}
+p {font: Calibri Normal 16px;}
+p .caption {font: Arial Bold 11px;}
+
+
+.dark-green, .btn {background-color: #014038; color: #C5C3C3;}
+.green {background-color: #96BAA0;color: #00231C;}
+.blue {background-color: #BDD4DA;color: #00231C;}
+.yellow, .btn:hover {background-color: #F0C06D;color: #00231C;}
+.yellow {background-color: #F0C06D;color: #00231C;}
+.white {background-color: #F7F7F7;color: #00231C;}
+.white-blue {background: linear-gradient(#F7F7F7, #BDD4DA); padding: 20px 0;}
+.blue-yellow {background: linear-gradient(#BDD4DA, #F0C06D); padding: 20px 0;}
+
+.btn {border: none;}
+.btn:hover {border: none;}
+#Subscribe tr td {background-color: #F7F7F7;color: #00231C;}
+
+.modal-backdrop {
+    z-index: -1;
+}
+
+.CTA-span  {
+  position: absolute;
+  bottom: 30%;
+  left: 10%;
+  right: auto;
+  align-items: center;
+  z-index: 1;
+  text-align: left;
+  background-color: #BDD4DAcc;
+  padding: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #00231C;
+}
+
+
+main span:hover {
+  background-color: #BDD4DA;
+}
+
+/*About Page Feedback*/
+.star-rating {
+  display: inline-flex;
+  direction: rtl;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  /*Code a hide and show for the star icon*/
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+  color: #F0C06D;
+}
+
+.star-rating label:hover, .star-rating label:hover ~ label {
+  color: #F0C06D;
+}
+
+.feedback {
+  border: 4px solid #00231C;
+  border-radius: 10px;
+  width:90%;
+  background-color: #F7F7F7;
+}
+
+.filter-background {
+  background-color: #BDD4DA;
+}
+
+#filter {
+    display: none;
+
+}
+/*Price Filter*/
+/* Styles for the price input container */
+.price-input-container {
+    width: 100%;
+}
+
+.price-input .price-field {
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.price-field span {
+    margin-right: 10px;
+    margin-top: 6px;
+    font-size: 17px;
+}
+
+.price-field input {
+    flex: 1;
+
+    border-radius: 9px;
+    text-align: center;
+    border: 0px;
+    background: #F7F7F7;
+}
+
+.price-input {
+    width: 100%;
+
+}
+
+/* Remove Arrows/Spinners */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.slider-container {
+    width: 100%;
+}
+
+.slider-container {
+    height: 6px;
+    position: relative;
+    background: #F7F7F7;
+    border-radius: 5px;
+}
+
+.slider-container .price-slider {
+    height: 100%;
+    left: 0%;
+    right: 0%;
+    position: absolute;
+    border-radius: 5px;
+    background: #96BAA0;
+}
+
+.range-input {
+    position: relative;
+}
+
+.range-input input {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: none;
+    top: -5px;
+    pointer-events: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+/*Grid*/
+.main-content {
+    flex: 1;
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #4a7c59;
+}
+
+
+/* Cart styles */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table th, .cart-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-total {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/* Styles for the range thumb in WebKit browsers */
+input[type="range"]::-webkit-slider-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 70%;
+    background:#014038 ;
+    pointer-events: auto;
+    -webkit-appearance: none;
+}
+
+
+/* The Modal (background) */
+.modal {
+ display: none;
+ position: fixed;
+ z-index: 1;
+ padding-top: 100px;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ overflow: auto;
+ /* Enable scroll if needed */
+ background-color: rgba(0, 0, 0, 0.5);
+ /* Black w/ opacity */
+}
+
+.modal-content {
+ background-color: #fefefe;
+ margin: auto;
+ padding: 50px;
+ border: 1px solid #888;
+ width: 80%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .main {
+        width: 80%;
+        margin-right: 5px;
+    }
+
+    .custom-wrapper {
+        width: 100%;
+        left: 0;
+        padding: 0 10px;
+    }
+
+    .projtitle {
+        width: 100%;
+        position: relative;
+        right: 26px;
+    }
+
+    .price-input {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-field {
+        margin-bottom: 10px;
+    }
+}
+
+
+/*Large Media*/
+@media (min-width: 992px) {
+  .feedback {
+    width: 75%;
+  }
+}
+
+/*Extra Large Media*/
+@media (min-width: 1200px) {
+  .feedback{
+    width:50%;
+  }
+}
+
